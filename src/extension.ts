@@ -3,7 +3,7 @@ import { ComponentGalleryPanel } from "./panels/ComponentGalleryPanel";
 
 export function activate(context: ExtensionContext) {
   // Create the show gallery command
-  const showGalleryCommand = commands.registerCommand("component-gallery-react.showGallery", () => {
+  const showGalleryCommand = commands.registerCommand("sysobs.run", () => {
     ComponentGalleryPanel.render(context.extensionUri);
   });
 
