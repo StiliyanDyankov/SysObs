@@ -11,8 +11,8 @@ export function LinkDemo() {
       <section className="component-example">
         <p>Inline Link</p>
         <p>
-          This is a sentence with an <VSCodeLink href="#">inline link</VSCodeLink>. How does it
-          look?
+          This is a sentence with an{" "}
+          <VSCodeLink href="#">inline link</VSCodeLink>. How does it look?
         </p>
       </section>
     </section>

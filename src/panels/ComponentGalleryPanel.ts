@@ -1,4 +1,11 @@
-import { Disposable, Webview, WebviewPanel, window, Uri, ViewColumn } from "vscode";
+import {
+  Disposable,
+  Webview,
+  WebviewPanel,
+  window,
+  Uri,
+  ViewColumn,
+} from "vscode";
 import { getUri } from "../utilities/getUri";
 import { getNonce } from "../utilities/getNonce";
 
@@ -30,7 +37,10 @@ export class ComponentGalleryPanel {
     this._panel.onDidDispose(() => this.dispose(), null, this._disposables);
 
     // Set the HTML content for the webview panel
-    this._panel.webview.html = this._getWebviewContent(this._panel.webview, extensionUri);
+    this._panel.webview.html = this._getWebviewContent(
+      this._panel.webview,
+      extensionUri,
+    );
   }
 
   /**
@@ -61,10 +71,13 @@ export class ComponentGalleryPanel {
             Uri.joinPath(extensionUri, "out"),
             Uri.joinPath(extensionUri, "webview-ui/build"),
           ],
-        }
+        },
       );
 
-      ComponentGalleryPanel.currentPanel = new ComponentGalleryPanel(panel, extensionUri);
+      ComponentGalleryPanel.currentPanel = new ComponentGalleryPanel(
+        panel,
+        extensionUri,
+      );
     }
   }
 
@@ -99,7 +112,12 @@ export class ComponentGalleryPanel {
    */
   private _getWebviewContent(webview: Webview, extensionUri: Uri) {
     // The CSS file from the React build output
-    const stylesUri = getUri(webview, extensionUri, ["webview-ui", "build", "assets", "index.css"]);
+    const stylesUri = getUri(webview, extensionUri, [
+      "webview-ui",
+      "build",
+      "assets",
+      "index.css",
+    ]);
     // Codicon font file from the React build output
     const codiconFontUri = getUri(webview, extensionUri, [
       "webview-ui",
@@ -108,7 +126,12 @@ export class ComponentGalleryPanel {
       "codicon.ttf",
     ]);
     // The JS file from the React build output
-    const scriptUri = getUri(webview, extensionUri, ["webview-ui", "build", "assets", "index.js"]);
+    const scriptUri = getUri(webview, extensionUri, [
+      "webview-ui",
+      "build",
+      "assets",
+      "index.js",
+    ]);
 
     const nonce = getNonce();
 

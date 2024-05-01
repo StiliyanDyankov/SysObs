@@ -14,7 +14,9 @@ export function TextFieldDemo() {
       </section>
       <section className="component-example">
         <p>With Placeholder</p>
-        <VSCodeTextField placeholder="This is placeholder text">Text Field Label</VSCodeTextField>
+        <VSCodeTextField placeholder="This is placeholder text">
+          Text Field Label
+        </VSCodeTextField>
       </section>
       <section className="component-example">
         <p>With Readonly</p>

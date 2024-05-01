@@ -14,7 +14,9 @@ export function TextAreaDemo() {
       </section>
       <section className="component-example">
         <p>With Placeholder</p>
-        <VSCodeTextArea placeholder="This is placeholder text">Text Area Label</VSCodeTextArea>
+        <VSCodeTextArea placeholder="This is placeholder text">
+          Text Area Label
+        </VSCodeTextArea>
       </section>
       <section className="component-example">
         <p>With Readonly</p>

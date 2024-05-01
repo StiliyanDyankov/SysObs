@@ -6,9 +6,24 @@ import {
 
 export function DataGridDemo() {
   const rowData = [
-    { cell1: "Cell Data", cell2: "Cell Data", cell3: "Cell Data", cell4: "Cell Data" },
-    { cell1: "Cell Data", cell2: "Cell Data", cell3: "Cell Data", cell4: "Cell Data" },
-    { cell1: "Cell Data", cell2: "Cell Data", cell3: "Cell Data", cell4: "Cell Data" },
+    {
+      cell1: "Cell Data",
+      cell2: "Cell Data",
+      cell3: "Cell Data",
+      cell4: "Cell Data",
+    },
+    {
+      cell1: "Cell Data",
+      cell2: "Cell Data",
+      cell3: "Cell Data",
+      cell4: "Cell Data",
+    },
+    {
+      cell1: "Cell Data",
+      cell2: "Cell Data",
+      cell3: "Cell Data",
+      cell4: "Cell Data",
+    },
   ];
 
   return (
@@ -33,10 +48,18 @@ export function DataGridDemo() {
           </VSCodeDataGridRow>
           {rowData.map((row) => (
             <VSCodeDataGridRow>
-              <VSCodeDataGridCell grid-column="1">{row.cell1}</VSCodeDataGridCell>
-              <VSCodeDataGridCell grid-column="2">{row.cell2}</VSCodeDataGridCell>
-              <VSCodeDataGridCell grid-column="3">{row.cell3}</VSCodeDataGridCell>
-              <VSCodeDataGridCell grid-column="4">{row.cell4}</VSCodeDataGridCell>
+              <VSCodeDataGridCell grid-column="1">
+                {row.cell1}
+              </VSCodeDataGridCell>
+              <VSCodeDataGridCell grid-column="2">
+                {row.cell2}
+              </VSCodeDataGridCell>
+              <VSCodeDataGridCell grid-column="3">
+                {row.cell3}
+              </VSCodeDataGridCell>
+              <VSCodeDataGridCell grid-column="4">
+                {row.cell4}
+              </VSCodeDataGridCell>
             </VSCodeDataGridRow>
           ))}
         </VSCodeDataGrid>
@@ -60,10 +83,18 @@ export function DataGridDemo() {
           </VSCodeDataGridRow>
           {rowData.map((row) => (
             <VSCodeDataGridRow>
-              <VSCodeDataGridCell grid-column="1">{row.cell1}</VSCodeDataGridCell>
-              <VSCodeDataGridCell grid-column="2">{row.cell2}</VSCodeDataGridCell>
-              <VSCodeDataGridCell grid-column="3">{row.cell3}</VSCodeDataGridCell>
-              <VSCodeDataGridCell grid-column="4">{row.cell4}</VSCodeDataGridCell>
+              <VSCodeDataGridCell grid-column="1">
+                {row.cell1}
+              </VSCodeDataGridCell>
+              <VSCodeDataGridCell grid-column="2">
+                {row.cell2}
+              </VSCodeDataGridCell>
+              <VSCodeDataGridCell grid-column="3">
+                {row.cell3}
+              </VSCodeDataGridCell>
+              <VSCodeDataGridCell grid-column="4">
+                {row.cell4}
+              </VSCodeDataGridCell>
             </VSCodeDataGridRow>
           ))}
         </VSCodeDataGrid>
@@ -87,10 +118,18 @@ export function DataGridDemo() {
           </VSCodeDataGridRow>
           {rowData.map((row) => (
             <VSCodeDataGridRow>
-              <VSCodeDataGridCell grid-column="1">{row.cell1}</VSCodeDataGridCell>
-              <VSCodeDataGridCell grid-column="2">{row.cell2}</VSCodeDataGridCell>
-              <VSCodeDataGridCell grid-column="3">{row.cell3}</VSCodeDataGridCell>
-              <VSCodeDataGridCell grid-column="4">{row.cell4}</VSCodeDataGridCell>
+              <VSCodeDataGridCell grid-column="1">
+                {row.cell1}
+              </VSCodeDataGridCell>
+              <VSCodeDataGridCell grid-column="2">
+                {row.cell2}
+              </VSCodeDataGridCell>
+              <VSCodeDataGridCell grid-column="3">
+                {row.cell3}
+              </VSCodeDataGridCell>
+              <VSCodeDataGridCell grid-column="4">
+                {row.cell4}
+              </VSCodeDataGridCell>
             </VSCodeDataGridRow>
           ))}
         </VSCodeDataGrid>
@@ -99,7 +138,8 @@ export function DataGridDemo() {
         <p>With Custom Column Widths</p>
         <VSCodeDataGrid
           grid-template-columns="100px 10vw 3fr 30%"
-          aria-label="With Custom Column Widths">
+          aria-label="With Custom Column Widths"
+        >
           <VSCodeDataGridRow row-type="header">
             <VSCodeDataGridCell cell-type="columnheader" grid-column="1">
               A Custom Header Title
@@ -116,10 +156,18 @@ export function DataGridDemo() {
           </VSCodeDataGridRow>
           {rowData.map((row) => (
             <VSCodeDataGridRow>
-              <VSCodeDataGridCell grid-column="1">{row.cell1}</VSCodeDataGridCell>
-              <VSCodeDataGridCell grid-column="2">{row.cell2}</VSCodeDataGridCell>
-              <VSCodeDataGridCell grid-column="3">{row.cell3}</VSCodeDataGridCell>
-              <VSCodeDataGridCell grid-column="4">{row.cell4}</VSCodeDataGridCell>
+              <VSCodeDataGridCell grid-column="1">
+                {row.cell1}
+              </VSCodeDataGridCell>
+              <VSCodeDataGridCell grid-column="2">
+                {row.cell2}
+              </VSCodeDataGridCell>
+              <VSCodeDataGridCell grid-column="3">
+                {row.cell3}
+              </VSCodeDataGridCell>
+              <VSCodeDataGridCell grid-column="4">
+                {row.cell4}
+              </VSCodeDataGridCell>
             </VSCodeDataGridRow>
           ))}
         </VSCodeDataGrid>

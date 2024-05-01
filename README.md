@@ -1,8 +1,11 @@
 # SysObs project
+
 Project to help you understand your frontend.
 
 # Run
+
 Has two options:
+
 - web dev-like with HMR;
 - VS code dev;
 
@@ -11,11 +14,13 @@ Has two options:
 ```
 
 ### web dev-like with HMR
+
 ```
     npm run start:webview
 ```
 
 ### VS code dev
+
 Must re-run to see changes.
 
 ```
@@ -28,4 +33,3 @@ Must re-run to see changes.
 
     # VS code -> CMD + Shift + P -> SysObs: Run
 ```
-
