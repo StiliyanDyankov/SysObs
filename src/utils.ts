@@ -2,8 +2,6 @@ import {
   createSourceFile,
   ScriptTarget,
   Node,
-  isFunctionDeclaration,
-  forEachChild,
 } from "typescript";
 import * as ts from "typescript";
 

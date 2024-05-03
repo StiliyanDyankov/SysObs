@@ -16,11 +16,14 @@ export function activate(context: ExtensionContext) {
 
       const documentText = document.getText();
 
-      console.log(documentText);
-
       const extractedFunctions = findFunctionDeclarations(documentText);
-      
-      console.log(extractedFunctions);
+
+      const panel = ComponentGalleryPanel.getCurrentPanel();
+
+      panel?.webview.postMessage({
+        command: "onScanData",
+        extractedFunctions,
+      });
     }
   });
 

@@ -20,7 +20,7 @@ import { getNonce } from "../utilities/getNonce";
  */
 export class ComponentGalleryPanel {
   public static currentPanel: ComponentGalleryPanel | undefined;
-  private readonly _panel: WebviewPanel;
+  public readonly _panel: WebviewPanel;
   private _disposables: Disposable[] = [];
 
   /**
@@ -41,6 +41,10 @@ export class ComponentGalleryPanel {
       this._panel.webview,
       extensionUri,
     );
+  }
+
+  public static getCurrentPanel() {
+    return this.currentPanel?._panel;
   }
 
   /**
@@ -152,12 +156,38 @@ export class ComponentGalleryPanel {
               src: url("${codiconFontUri}") format("truetype");
             }
           </style>
-        </head>
-        <body>
+          </head>
+          <body>
           <div id="root"></div>
+          <script nonce="${nonce}">
+            ${handleScanEventScriptBody}
+          </script>
           <script type="module" nonce="${nonce}" src="${scriptUri}"></script>
         </body>
       </html>
     `;
   }
 }
+
+const handleScanEventScriptBody = `
+  const vscode = acquireVsCodeApi();
+
+  window.addEventListener('message', event => {
+    
+    const message = event.data; 
+    
+    switch (message.command) {
+      case 'onScanData': {
+          console.log('from script - recieved', event);
+          vscode.postMessage({
+            type: 'onScanData',
+            value: message.extractedFunctions
+          });
+
+          break;
+        }
+        default: {
+          break;
+        }
+    }
+  })`;
