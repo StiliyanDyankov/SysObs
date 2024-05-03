@@ -1,8 +1,4 @@
-import {
-  createSourceFile,
-  ScriptTarget,
-  Node,
-} from "typescript";
+import { createSourceFile, ScriptTarget, Node } from "typescript";
 import * as ts from "typescript";
 
 export function findFunctionDeclarations(sourceCode: string) {

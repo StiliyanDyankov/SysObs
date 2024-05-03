@@ -178,7 +178,6 @@ const handleScanEventScriptBody = `
     
     switch (message.command) {
       case 'onScanData': {
-          console.log('from script - recieved', event);
           vscode.postMessage({
             type: 'onScanData',
             value: message.extractedFunctions
